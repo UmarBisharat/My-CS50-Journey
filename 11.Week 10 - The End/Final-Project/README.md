@@ -21,6 +21,3 @@ and view their total spending.
 2. Run: sqlite3 expenses.db < schema.sql
 3. Run: flask run
 4. Open browser
-
-## Video Demo
-Link: (add your YouTube link here)
