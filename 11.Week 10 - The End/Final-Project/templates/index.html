@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Expense Tracker</h1>
+
+<form method="post">
+    <input name="title" placeholder="Expense name" type="text">
+    <input name="amount" placeholder="Amount" type="number" step="0.01">
+    <button type="submit">Add</button>
+</form>
+
+<h2>Total: {{ total or 0 }}</h2>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Amount</th>
+    </tr>
+    {% for expense in expenses %}
+    <tr>
+        <td>{{ expense.title }}</td>
+        <td>{{ expense.amount }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
